@@ -1,37 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BakeryShop.Models;
+using BakeryShop.ViewModel;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using BakeryShop.Models;
+using System.Diagnostics;
 
 namespace BakeryShop.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IBreadRepository _breadRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IBreadRepository breadRepository)
         {
-            _logger = logger;
+            _breadRepository = breadRepository;
         }
 
         public IActionResult Index()
         {
-            return View();
-        }
+            var homeViewModel = new HomeViewModel()
+            {
+                BreadsOfTheWeek = _breadRepository.BreadOfTheWeek()
+            };
+            return View(homeViewModel);
 
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
         }
     }
 }

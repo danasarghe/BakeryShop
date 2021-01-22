@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace BakeryShop.Models
 {
@@ -14,9 +12,11 @@ namespace BakeryShop.Models
         {
             _bakeryDbContext = bakeryDbContext;
         }
-        public void Add(Bread bread)
+        
+
+        public IEnumerable<Bread> BreadOfTheWeek()
         {
-            _bakeryDbContext.Add(bread);
+            return _bakeryDbContext.Breads.Include(b => b.Category).Where(b => b.IsBreadOfTheWeek);
         }
 
         public void Delete(Bread bread)
@@ -34,11 +34,6 @@ namespace BakeryShop.Models
             return _bakeryDbContext.Breads.FirstOrDefault(b => b.BreadId == id);
         }
 
-        public void Update(Bread bread)
-        {
-            _bakeryDbContext.Breads.Attach(bread);
-            _bakeryDbContext.Entry(bread).State = EntityState.Modified;
-
-        }
+        
     }
 }

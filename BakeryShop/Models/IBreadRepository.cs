@@ -2,14 +2,14 @@
 
 namespace BakeryShop.Models
 {
-    interface IBreadRepository
+    public interface IBreadRepository
     {
-        void Add(Bread bread);
-        void Update(Bread bread);
+        
         IEnumerable<Bread> GetAll();
+        IEnumerable<Bread> BreadOfTheWeek();
 
         Bread GetById(int id);
-        void Delete(Bread bread);
+        
 
 
     }

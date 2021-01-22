@@ -28,7 +28,12 @@ namespace BakeryShop
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<BakeryDbContext>();
+            services.AddScoped<IBreadRepository, BreadRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddHttpContextAccessor();
+            services.AddSession();
             services.AddControllersWithViews();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

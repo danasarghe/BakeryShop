@@ -1,0 +1,11 @@
+﻿@model BreadListViewModel
+
+<h1>@Model.CurrentCategory</h1>
+
+<div class="row">
+    @foreach (var bread in Model.Breads)
+    {
+        <partial name="_BreadCard" model="bread" />
+
+    }
+</div>
