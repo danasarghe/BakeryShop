@@ -4,14 +4,16 @@ using BakeryShop.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BakeryShop.Migrations
 {
     [DbContext(typeof(BakeryDbContext))]
-    partial class BakeryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210122194505_ImageBaquette")]
+    partial class ImageBaquette
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,8 +61,8 @@ namespace BakeryShop.Migrations
                             BreadId = 1,
                             CategoryId = 2,
                             Description = "100% faina alba de grau, apa, sare, 5% maia naturala din faina de grau, 600 g.",
-                            ImageThumbnailUrl = "https://drive.google.com/file/d/1MFmOehz-SZVzCcIR515MaNwNLdzQFNLp/view?usp=sharing",
-                            ImageUrl = "https://drive.google.com/file/d/1MFmOehz-SZVzCcIR515MaNwNLdzQFNLp/view?usp=sharing",
+                            ImageThumbnailUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/applepiesmall.jpg",
+                            ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/applepie.jpg",
                             IsBreadOfTheWeek = true,
                             Name = "White Bread",
                             Price = 10m
@@ -70,8 +72,8 @@ namespace BakeryShop.Migrations
                             BreadId = 2,
                             CategoryId = 1,
                             Description = "Faina alba de grau,Faina spelta, apa, sare, 5% maia naturala din faina de grau, 600 g.",
-                            ImageThumbnailUrl = "https://drive.google.com/file/d/1xJPc2Zj4MqpqWZ_7y2PC0EgZ7Hc74U2L/view?usp=sharing",
-                            ImageUrl = "https://drive.google.com/file/d/1xJPc2Zj4MqpqWZ_7y2PC0EgZ7Hc74U2L/view?usp=sharing",
+                            ImageThumbnailUrl = "https://onedrive.live.com/?cid=880317F0636F898D&id=880317F0636F898D%21325&parId=880317F0636F898D%21316&o=OneUp",
+                            ImageUrl = "https://onedrive.live.com/?cid=880317F0636F898D&id=880317F0636F898D%21325&parId=880317F0636F898D%21316&o=OneUp",
                             IsBreadOfTheWeek = false,
                             Name = "Spelt Bread",
                             Price = 12m
@@ -81,8 +83,8 @@ namespace BakeryShop.Migrations
                             BreadId = 3,
                             CategoryId = 2,
                             Description = "Prin faina 100% integrala din care este dospita, aceasta paine aduce numeroase beneficii sanatatii.",
-                            ImageThumbnailUrl = "https://drive.google.com/file/d/1SaJtODcKIclXRiRzufvnWTKaaXqmgH6f/view?usp=sharing",
-                            ImageUrl = "https://drive.google.com/file/d/1SaJtODcKIclXRiRzufvnWTKaaXqmgH6f/view?usp=sharing",
+                            ImageThumbnailUrl = "https://onedrive.live.com/?cid=880317F0636F898D&id=880317F0636F898D%21320&parId=880317F0636F898D%21316&o=OneUp",
+                            ImageUrl = "https://onedrive.live.com/?cid=880317F0636F898D&id=880317F0636F898D%21320&parId=880317F0636F898D%21316&o=OneUp",
                             IsBreadOfTheWeek = true,
                             Name = "Whole Weat Bread",
                             Price = 11m
@@ -92,8 +94,8 @@ namespace BakeryShop.Migrations
                             BreadId = 4,
                             CategoryId = 2,
                             Description = "Paine intermediara cu maia naturala, fara drojdie si fara aditivi. Incearca si tu savuroasa paine rustica ",
-                            ImageThumbnailUrl = "https://drive.google.com/file/d/1LKKPFswosygLv_HS5_zhnLkVzAmtSv6f/view?usp=sharing",
-                            ImageUrl = "https://drive.google.com/file/d/1LKKPFswosygLv_HS5_zhnLkVzAmtSv6f/view?usp=sharing",
+                            ImageThumbnailUrl = "https://onedrive.live.com/?cid=880317F0636F898D&id=880317F0636F898D%21318&parId=880317F0636F898D%21316&o=OneUp",
+                            ImageUrl = "https://onedrive.live.com/?cid=880317F0636F898D&id=880317F0636F898D%21318&parId=880317F0636F898D%21316&o=OneUp",
                             IsBreadOfTheWeek = true,
                             Name = "Rustic Bread",
                             Price = 12m
@@ -102,9 +104,9 @@ namespace BakeryShop.Migrations
                         {
                             BreadId = 5,
                             CategoryId = 1,
-                            Description = "Se spune că simplitatea este cea mai înalta formă a sofisticării, iar această pâine susţine această afirmaţie în mod categoric.",
-                            ImageThumbnailUrl = "https://drive.google.com/file/d/1HvwU6ZQf5rsAPYBPprqNgDHKqksxvqZF/view?usp=sharing",
-                            ImageUrl = "https://drive.google.com/file/d/1HvwU6ZQf5rsAPYBPprqNgDHKqksxvqZF/view?usp=sharing",
+                            Description = "Se spune că simplitatea este cea mai înalta formă a sofisticării, iar această pâine susţine această afirmaţie în mod categoric. Gustul bogat si simplu o face extrem de versatilă pentru toate ideile de masă.",
+                            ImageThumbnailUrl = "https://onedrive.live.com/?cid=880317F0636F898D&id=880317F0636F898D%21323&parId=880317F0636F898D%21316&o=OneUp",
+                            ImageUrl = "https://onedrive.live.com/?cid=880317F0636F898D&id=880317F0636F898D%21323&parId=880317F0636F898D%21316&o=OneUp",
                             IsBreadOfTheWeek = true,
                             Name = "Leaven Bread",
                             Price = 13m
@@ -114,8 +116,8 @@ namespace BakeryShop.Migrations
                             BreadId = 6,
                             CategoryId = 1,
                             Description = "Baghetă tradițională franţuzească, cu miez puţin, alveolat şi o crustă crocantă şi subţire. Alegerea perfectă pentru toate mesele.",
-                            ImageThumbnailUrl = "https://drive.google.com/file/d/1vh-X6_ETQYgdb-zUA0JSUpzYYdXO-w0u/view?usp=sharing",
-                            ImageUrl = "https://drive.google.com/file/d/1vh-X6_ETQYgdb-zUA0JSUpzYYdXO-w0u/view?usp=sharing",
+                            ImageThumbnailUrl = "https://1drv.ms/u/s!Ao2Jb2PwFwOIgkrbq4w-CE0v0E-t",
+                            ImageUrl = "https://1drv.ms/u/s!Ao2Jb2PwFwOIgkrbq4w-CE0v0E-t",
                             IsBreadOfTheWeek = false,
                             Name = "Baquette Bread",
                             Price = 6.5m
@@ -125,8 +127,8 @@ namespace BakeryShop.Migrations
                             BreadId = 7,
                             CategoryId = 1,
                             Description = "O pâine moale şi fină, de inspiraţie italienească, conţine ulei de măsline extravirgin din belşug, contribuind decisiv la gustul agreabil.",
-                            ImageThumbnailUrl = "https://drive.google.com/file/d/1ZJPjA3tneKXqncoAXpmD63L35ybRaJ8D/view?usp=sharing",
-                            ImageUrl = "https://drive.google.com/file/d/1ZJPjA3tneKXqncoAXpmD63L35ybRaJ8D/view?usp=sharing",
+                            ImageThumbnailUrl = "https://onedrive.live.com/?cid=880317F0636F898D&id=880317F0636F898D%21329&parId=880317F0636F898D%21316&o=OneUp",
+                            ImageUrl = "https://onedrive.live.com/?cid=880317F0636F898D&id=880317F0636F898D%21329&parId=880317F0636F898D%21316&o=OneUp",
                             IsBreadOfTheWeek = false,
                             Name = "Ciabata Bread",
                             Price = 13m

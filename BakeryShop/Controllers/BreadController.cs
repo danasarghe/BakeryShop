@@ -46,6 +46,7 @@ namespace BakeryShop.Controllers
                 currentCategory = _categoryRepository.GetAllCategories().FirstOrDefault(c => c.CategoryName == category)?.CategoryName;
             }
 
+
             return View(new BreadListViewModel
             {
                 Breads = breads,
