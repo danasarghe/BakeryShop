@@ -4,14 +4,16 @@ using BakeryShop.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BakeryShop.Migrations
 {
     [DbContext(typeof(BakeryDbContext))]
-    partial class BakeryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210123134110_AddBread")]
+    partial class AddBread
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,10 +83,10 @@ namespace BakeryShop.Migrations
                             BreadId = 3,
                             CategoryId = 2,
                             Description = "Prin faina 100% integrala din care este dospita, aceasta paine aduce numeroase beneficii sanatatii.",
-                            ImageThumbnailUrl = "https://www.flickr.com/photos/26546421@N05/10883843896/in/photostream/",
+                            ImageThumbnailUrl = "https://drive.google.com/file/d/1SaJtODcKIclXRiRzufvnWTKaaXqmgH6f/view?usp=sharing",
                             ImageUrl = "https://drive.google.com/file/d/1SaJtODcKIclXRiRzufvnWTKaaXqmgH6f/view?usp=sharing",
                             IsBreadOfTheWeek = true,
-                            Name = "Paine integrala",
+                            Name = "Paine integrala de grau",
                             Price = 11m
                         },
                         new
@@ -139,7 +141,7 @@ namespace BakeryShop.Migrations
                             ImageThumbnailUrl = "https://drive.google.com/file/d/1xnbTQSSAVd_JaLvF2mtrf5aiR2RLc6Xf/view?usp=sharing",
                             ImageUrl = "https://drive.google.com/file/d/1xnbTQSSAVd_JaLvF2mtrf5aiR2RLc6Xf/view?usp=sharing",
                             IsBreadOfTheWeek = false,
-                            Name = "Pâine integrală cu seminţe de dovleac",
+                            Name = "Pâine integrală de grâu şi seminţe de dovleac",
                             Price = 14m
                         },
                         new

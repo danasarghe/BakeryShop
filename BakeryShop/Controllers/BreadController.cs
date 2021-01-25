@@ -29,7 +29,7 @@ namespace BakeryShop.Controllers
 
 
         }
-
+        [HttpGet]
         public ViewResult List(string category)
         {
             IEnumerable<Bread> breads;
@@ -38,11 +38,11 @@ namespace BakeryShop.Controllers
             if (string.IsNullOrEmpty(category))
             {
                 breads = _breadRepository.GetAll().OrderBy(p => p.Name);
-                currentCategory = "All bread";
+                currentCategory = "Produsele noastre";
             }
             else
             {
-                breads = _breadRepository.GetAll().Where(b => b.Category.CategoryName == category);
+                breads = _breadRepository.GetAll().Where(b => b.Category.CategoryName == category).OrderBy(p => p.Name);
                 currentCategory = _categoryRepository.GetAllCategories().FirstOrDefault(c => c.CategoryName == category)?.CategoryName;
             }
 

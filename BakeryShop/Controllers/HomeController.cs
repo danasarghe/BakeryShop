@@ -13,7 +13,7 @@ namespace BakeryShop.Controllers
         {
             _breadRepository = breadRepository;
         }
-
+        [HttpGet]
         public IActionResult Index()
         {
             var homeViewModel = new HomeViewModel()

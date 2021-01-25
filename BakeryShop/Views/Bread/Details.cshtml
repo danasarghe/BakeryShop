@@ -2,7 +2,7 @@
 
 <h2>@Model.Name</h2>
 <div class="thumbnail">
-    <img alt="@Model.Name" src="@Model.ImageUrl" class="img-fluid" style="width:348px;height:217px;" />
+    <img alt="@Model.Name" src="~/Images/artisan-sourdough-bread.jpg" class="img-fluid" style="width:400px;height:300px;" />
     <div class="caption-full">
         <h3 class="pull-right">@Model.Price.ToString("c")</h3>
         <h3>
@@ -13,7 +13,7 @@
         <div class="addToCart">
             <p class="button">
                 <a class="btn btn-primary"
-                   asp-route-pieId="@Model.BreadId">Add to cart</a>
+                   asp-route-breadId="@Model.BreadId">Add to cart</a>
             </p>
         </div>
     </div>
