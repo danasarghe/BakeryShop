@@ -12,17 +12,13 @@ namespace BakeryShop.Models
         {
             _bakeryDbContext = bakeryDbContext;
         }
-        
+
 
         public IEnumerable<Bread> BreadOfTheWeek()
         {
             return _bakeryDbContext.Breads.Include(b => b.Category).Where(b => b.IsBreadOfTheWeek);
         }
 
-        public void Delete(Bread bread)
-        {
-            _bakeryDbContext.Remove(bread);
-        }
 
         public IEnumerable<Bread> GetAll()
         {
@@ -34,6 +30,6 @@ namespace BakeryShop.Models
             return _bakeryDbContext.Breads.FirstOrDefault(b => b.BreadId == id);
         }
 
-        
+
     }
 }
