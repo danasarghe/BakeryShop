@@ -4,14 +4,16 @@ using BakeryShop.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BakeryShop.Migrations
 {
     [DbContext(typeof(BakeryDbContext))]
-    partial class BakeryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210126163438_BreadUrlLocal")]
+    partial class BreadUrlLocal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,8 +61,8 @@ namespace BakeryShop.Migrations
                             BreadId = 1,
                             CategoryId = 2,
                             Description = "100% faina alba de grau, apa, sare, 5% maia naturala din faina de grau, 600 g.",
-                            ImageThumbnailUrl = "https://localhost:5001/Images/whitebread.png",
-                            ImageUrl = "https://localhost:5001/Images/whitebread.png",
+                            ImageThumbnailUrl = "",
+                            ImageUrl = "",
                             IsBreadOfTheWeek = true,
                             Name = "Paine alba",
                             Price = 10m
@@ -70,8 +72,8 @@ namespace BakeryShop.Migrations
                             BreadId = 2,
                             CategoryId = 1,
                             Description = "Faina alba de grau,Faina spelta, apa, sare, 5% maia naturala din faina de grau, 600 g.",
-                            ImageThumbnailUrl = "https://localhost:5001/Images/semola.jpg",
-                            ImageUrl = "https://localhost:5001/Images/semola.jpg",
+                            ImageThumbnailUrl = "https://localhost:5001/Images/White.png",
+                            ImageUrl = "https://localhost:5001/Images/White.png",
                             IsBreadOfTheWeek = false,
                             Name = "Paine cu faina spelta",
                             Price = 12m
@@ -81,8 +83,8 @@ namespace BakeryShop.Migrations
                             BreadId = 3,
                             CategoryId = 2,
                             Description = "Prin faina 100% integrala din care este dospita, aceasta paine aduce numeroase beneficii sanatatii.",
-                            ImageThumbnailUrl = "https://localhost:5001/Images/Integrala.jpg",
-                            ImageUrl = "https://localhost:5001/Images/Integrala.jpg",
+                            ImageThumbnailUrl = "https://localhost:5001/Images/Paine-integrala.png",
+                            ImageUrl = "https://localhost:5001/Images/Paine-integrala.png",
                             IsBreadOfTheWeek = true,
                             Name = "Paine integrala",
                             Price = 11m
@@ -103,8 +105,8 @@ namespace BakeryShop.Migrations
                             BreadId = 5,
                             CategoryId = 1,
                             Description = "Se spune că simplitatea este cea mai înalta formă a sofisticării, iar această pâine susţine această afirmaţie în mod categoric.",
-                            ImageThumbnailUrl = "https://localhost:5001/Images/leavenBread.png",
-                            ImageUrl = "https://localhost:5001/Images/leavenBread.png",
+                            ImageThumbnailUrl = "https://localhost:5001/Images/leaven.png",
+                            ImageUrl = "https://localhost:5001/Images/leaven.png",
                             IsBreadOfTheWeek = true,
                             Name = "Paine cu maia",
                             Price = 13m
