@@ -1,10 +1,10 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace BakeryShop.Models
 {
     public interface ICategoryRepository
     {
-        IQueryable<Category> GetAllCategories();
+        IEnumerable<Category> GetAllCategories();
         Category GetById(int id);
     }
 }

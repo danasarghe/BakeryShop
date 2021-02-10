@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace BakeryShop.Models
 {
@@ -10,7 +11,7 @@ namespace BakeryShop.Models
         {
             _bakeryDbContext = bakeryDbContext;
         }
-        public IQueryable<Category> GetAllCategories()
+        public IEnumerable<Category> GetAllCategories()
         {
             return _bakeryDbContext.Categories;
         }
